@@ -1,4 +1,12 @@
-This README file is here to reminde you that this is a ULTRA SIMPLE QR CODE GENERATOR!!!
-RUN the main.py file (the only file) and input your text/link, it will then generate a QR Code for u!
-This project is currently on version 0.0.0.0.0.0.0.0.0.1
-ENJOY!
+# Ultra Simple QR Code Generator
+
+This is the Ultra Simple QR Code Generator with GUI! application built using Python and `tkinter`. I have also used chatgpt for some bug fixing and adding comments. 
+
+It allows users to create customized QR codes by entering text, selecting error correction levels, and choosing colors for the QR code.
+
+## Features
+
+- Customizable QR Code generation.
+- Options for box size, border, and colors.
+- Multiple error correction levels.
+- Simple and intuitive GUI.
