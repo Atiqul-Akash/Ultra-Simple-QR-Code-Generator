@@ -58,46 +58,56 @@ def choose_back_color():
 root = Tk()
 root.title("Ultra Simple QR Code Generator")
 
+# Define color palette
+royal_blue = "#091235"
+navy_blue = "#14202E"
+midnight_blue = "#2B4257"
+blue_gray = "#88A9C3"
+
+# Set window background color to Navy Blue
+root.configure(bg=navy_blue)
+
 # Labels and entry for text
-Label(root, text="Enter Your Text:").grid(row=0, column=0, padx=10, pady=10)
-text_entry = Entry(root, width=30)
+Label(root, text="Enter Your Text:", bg=navy_blue, fg="white", font=("Arial", 12)).grid(row=0, column=0, padx=10, pady=10)
+text_entry = Entry(root, width=30, bg=blue_gray, fg="black", font=("Arial", 12))
 text_entry.grid(row=0, column=1, padx=10, pady=10)
 
 # Label and entry for box size
-Label(root, text="Box Size:").grid(row=1, column=0, padx=10, pady=10)
-box_size_entry = Entry(root, width=10)
+Label(root, text="Box Size:", bg=navy_blue, fg="white", font=("Arial", 12)).grid(row=1, column=0, padx=10, pady=10)
+box_size_entry = Entry(root, width=10, bg=blue_gray, fg="black", font=("Arial", 12))
 box_size_entry.insert(0, "20")
 box_size_entry.grid(row=1, column=1, padx=10, pady=10)
 
 # Label and entry for border size
-Label(root, text="Border Size:").grid(row=2, column=0, padx=10, pady=10)
-border_entry = Entry(root, width=10)
+Label(root, text="Border Size:", bg=navy_blue, fg="white", font=("Arial", 12)).grid(row=2, column=0, padx=10, pady=10)
+border_entry = Entry(root, width=10, bg=blue_gray, fg="black", font=("Arial", 12))
 border_entry.insert(0, "6")
 border_entry.grid(row=2, column=1, padx=10, pady=10)
 
 # Option menu for error correction level
-Label(root, text="Error Correction:").grid(row=3, column=0, padx=10, pady=10)
+Label(root, text="Error Correction:", bg=navy_blue, fg="white", font=("Arial", 12)).grid(row=3, column=0, padx=10, pady=10)
 error_level_var = StringVar()
 error_level_var.set("L (7%)")
 error_level_menu = OptionMenu(root, error_level_var, "L (7%)", "M (15%)", "Q (25%)", "H (30%)")
+error_level_menu.config(bg=blue_gray, fg="black", font=("Arial", 12))
 error_level_menu.grid(row=3, column=1, padx=10, pady=10)
 
 # Button and entry for fill color
-Label(root, text="Fill Color:").grid(row=4, column=0, padx=10, pady=10)
+Label(root, text="Fill Color:", bg=navy_blue, fg="white", font=("Arial", 12)).grid(row=4, column=0, padx=10, pady=10)
 fill_color_var = StringVar()
-fill_color_var.set("red")
-fill_color_button = Button(root, text="Choose Fill Color", command=choose_fill_color)
+fill_color_var.set("black")
+fill_color_button = Button(root, text="Choose Fill Color", command=choose_fill_color, bg=royal_blue, fg="white", font=("Arial", 12))
 fill_color_button.grid(row=4, column=1, padx=10, pady=10)
 
 # Button and entry for background color
-Label(root, text="Background Color:").grid(row=5, column=0, padx=10, pady=10)
+Label(root, text="Background Color:", bg=navy_blue, fg="white", font=("Arial", 12)).grid(row=5, column=0, padx=10, pady=10)
 back_color_var = StringVar()
-back_color_var.set("black")
-back_color_button = Button(root, text="Choose Background Color", command=choose_back_color)
+back_color_var.set("white")
+back_color_button = Button(root, text="Choose Background Color", command=choose_back_color, bg=royal_blue, fg="white", font=("Arial", 12))
 back_color_button.grid(row=5, column=1, padx=10, pady=10)
 
 # Generate button
-generate_button = Button(root, text="Generate QR Code", command=generate_qr)
+generate_button = Button(root, text="Generate QR Code", command=generate_qr, bg=midnight_blue, fg="white", font=("Arial", 12, "bold"))
 generate_button.grid(row=6, column=0, columnspan=2, pady=20)
 
 # Run the GUI loop
