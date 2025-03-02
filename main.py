@@ -56,7 +56,7 @@ def choose_back_color():
 
 # Create GUI window
 root = Tk()
-root.title("QR Code Generator")
+root.title("Ultra Simple QR Code Generator")
 
 # Labels and entry for text
 Label(root, text="Enter Your Text:").grid(row=0, column=0, padx=10, pady=10)
